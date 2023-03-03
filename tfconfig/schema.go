@@ -90,6 +90,22 @@ var variableSchema = &hcl.BodySchema{
 			Name: "deprecated",
 		},
 	},
+	Blocks: []hcl.BlockHeaderSchema{
+		{
+			Type: "validation",
+		},
+	},
+}
+
+var validationSchema = &hcl.BodySchema{
+	Attributes: []hcl.AttributeSchema{
+		{
+			Name: "condition",
+		},
+		{
+			Name: "error_message",
+		},
+	},
 }
 
 var outputSchema = &hcl.BodySchema{
