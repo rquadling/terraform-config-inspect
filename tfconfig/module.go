@@ -19,6 +19,7 @@ type Module struct {
 	ManagedResources map[string]*Resource       `json:"managed_resources"`
 	DataResources    map[string]*Resource       `json:"data_resources"`
 	ModuleCalls      map[string]*ModuleCall     `json:"module_calls"`
+	Checks           map[string]*Check          `json:"checks"`
 
 	// Backend only appears in the root module, if at all. It won't be
 	// possible to tell if the backend config is the implied "local" backend
@@ -57,5 +58,6 @@ func NewModule(path string) *Module {
 		ManagedResources:  make(map[string]*Resource),
 		DataResources:     make(map[string]*Resource),
 		ModuleCalls:       make(map[string]*ModuleCall),
+		Checks:            make(map[string]*Check),
 	}
 }

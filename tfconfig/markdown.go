@@ -97,6 +97,14 @@ Backend: {{ .Backend.Type }}{{end}}
 * {{ tt .Name }} from {{ tt .Source }}{{ if .Version }} ({{ tt .Version }}){{ end }}
 {{- end}}{{end}}
 
+{{- if .Checks}}
+
+## Checks
+{{- range .Checks }}
+* {{ printf "check.%s" .Name | tt }}{{- if .DataResource}}
+  * {{ printf "data.%s.%s" .DataResource.Type .DataResource.Name | tt }} from {{ tt .DataResource.Provider.Name }}{{end}}
+{{- end}}{{end}}
+
 {{- if .Diagnostics}}
 
 ## Problems

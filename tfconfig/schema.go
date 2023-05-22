@@ -38,6 +38,10 @@ var rootSchema = &hcl.BodySchema{
 			LabelNames: []string{"name"},
 		},
 		{
+			Type:       "check",
+			LabelNames: []string{"name"},
+		},
+		{
 			Type:       "component",
 			LabelNames: []string{"name"},
 		},
@@ -150,6 +154,31 @@ var resourceSchema = &hcl.BodySchema{
 	Attributes: []hcl.AttributeSchema{
 		{
 			Name: "provider",
+		},
+	},
+}
+
+var checkSchema = &hcl.BodySchema{
+	Blocks: []hcl.BlockHeaderSchema{
+		{
+			Type:       "data",
+			LabelNames: []string{"type", "name"},
+		},
+		{
+			Type: "assert",
+		},
+	},
+}
+
+var checkRuleSchema = &hcl.BodySchema{
+	Attributes: []hcl.AttributeSchema{
+		{
+			Name:     "condition",
+			Required: true,
+		},
+		{
+			Name:     "error_message",
+			Required: true,
 		},
 	},
 }
