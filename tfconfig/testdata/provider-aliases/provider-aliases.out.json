@@ -14,12 +14,51 @@
     "foo": {}
   },
   "provider_configs": {
-    "bar.yellow": {"name": "bar", "alias": "yellow"},
-    "baz": {"name": "baz"},
-    "empty": {"name": "empty"},
-    "bar": {"name": "bar"},
-    "foo.blue": {"name": "foo", "alias": "blue"},
-    "foo.red": {"name": "foo", "alias": "red"}
+    "bar.yellow": {
+      "name": "bar",
+      "alias": "yellow",
+      "pos": {
+        "filename": "testdata/provider-aliases/provider-aliases.tf",
+        "line": 20
+      }
+    },
+    "baz": {
+      "name": "baz",
+      "pos": {
+        "filename": "testdata/provider-aliases/provider-aliases.tf",
+        "line": 24
+      }
+    },
+    "empty": {
+      "name": "empty",
+      "pos": {
+        "filename": "testdata/provider-aliases/provider-aliases.tf",
+        "line": 27
+      }
+    },
+    "bar": {
+      "name": "bar",
+      "pos": {
+        "filename": "testdata/provider-aliases/provider-aliases.tf",
+        "line": 17
+      }
+    },
+    "foo.blue": {
+      "name": "foo",
+      "alias": "blue",
+      "pos": {
+        "filename": "testdata/provider-aliases/provider-aliases.tf",
+        "line": 9
+      }
+    },
+    "foo.red": {
+      "name": "foo",
+      "alias": "red",
+      "pos": {
+        "filename": "testdata/provider-aliases/provider-aliases.tf",
+        "line": 13
+      }
+    }
   },
   "managed_resources": {},
   "data_resources": {},

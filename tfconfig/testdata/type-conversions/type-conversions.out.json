@@ -40,7 +40,13 @@
         }
     },
     "provider_configs": {
-        "foo": {"name": "foo"}
+        "foo": {
+            "name": "foo",
+            "pos": {
+                "filename": "testdata/type-conversions/type-conversions.tf",
+                "line": 15
+            }
+        }
     },
     "managed_resources": {
         "foo.foo": {
