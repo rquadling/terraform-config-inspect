@@ -29,7 +29,9 @@ Hashicorp's helper library. That's it really.
 
 I hope you find it useful.
 
-If anyone wants to make subsequent pull requests, or
+If anyone wants to make subsequent pull requests, or raise issues, then please do so.
+
+
 
 ```
 $ go install github.com/rquadling/terraform-config-inspect@latest
