@@ -37,8 +37,20 @@
         }
     },
     "provider_configs": {
-        "aws": {"name": "aws"},
-        "noversion": {"name": "noversion"}
+        "aws": {
+            "name": "aws",
+            "pos": {
+                "filename": "testdata/legacy-block-labels/legacy-block-labels.tf",
+                "line": 20
+            }
+        },
+        "noversion": {
+            "name": "noversion",
+            "pos": {
+                "filename": "testdata/legacy-block-labels/legacy-block-labels.tf",
+                "line": 25
+            }
+        }
     },
     "managed_resources": {
         "null_resource.foo": {

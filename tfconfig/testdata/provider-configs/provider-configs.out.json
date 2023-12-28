@@ -17,8 +17,20 @@
     "variables": {},
     "outputs": {},
     "provider_configs": {
-        "foo": {"name": "foo"},
-        "bar": {"name": "bar"}
+        "foo": {
+            "name": "foo",
+            "pos": {
+                "filename": "testdata/provider-configs/provider-configs.tf",
+                "line": 1
+            }
+        },
+        "bar": {
+            "name": "bar",
+            "pos": {
+                "filename": "testdata/provider-configs/provider-configs.tf",
+                "line": 4
+            }
+        }
     },
     "managed_resources": {
         "bar_bar.bar": {

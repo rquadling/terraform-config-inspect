@@ -109,7 +109,13 @@
         }
     },
     "provider_configs": {
-        "foo": {"name": "foo"}
+        "foo": {
+            "name": "foo",
+            "pos": {
+                "filename": "testdata/type-errors/type-errors.tf",
+                "line": 16
+            }
+        }
     },
     "managed_resources": {
         "foo.foo": {

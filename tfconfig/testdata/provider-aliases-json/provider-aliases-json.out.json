@@ -14,12 +14,51 @@
     "foo": {}
   },
   "provider_configs": {
-    "bar.yellow": {"name": "bar", "alias": "yellow"},
-    "baz": {"name": "baz"},
-    "empty": {"name": "empty"},
-    "bar": {"name": "bar"},
-    "foo.blue": {"name": "foo", "alias": "blue"},
-    "foo.red": {"name": "foo", "alias": "red"}
+    "bar.yellow": {
+      "name": "bar",
+      "alias": "yellow",
+      "pos": {
+        "filename": "testdata/provider-aliases-json/provider-aliases-json.tf.json",
+        "line": 20
+      }
+    },
+    "baz": {
+      "name": "baz",
+      "pos": {
+        "filename": "testdata/provider-aliases-json/provider-aliases-json.tf.json",
+        "line": 26
+      }
+    },
+    "empty": {
+      "name": "empty",
+      "pos": {
+        "filename": "testdata/provider-aliases-json/provider-aliases-json.tf.json",
+        "line": 29
+      }
+    },
+    "bar": {
+      "name": "bar",
+      "pos": {
+        "filename": "testdata/provider-aliases-json/provider-aliases-json.tf.json",
+        "line": 20
+      }
+    },
+    "foo.blue": {
+      "name": "foo",
+      "alias": "blue",
+      "pos": {
+        "filename": "testdata/provider-aliases-json/provider-aliases-json.tf.json",
+        "line": 12
+      }
+    },
+    "foo.red": {
+      "name": "foo",
+      "alias": "red",
+      "pos": {
+        "filename": "testdata/provider-aliases-json/provider-aliases-json.tf.json",
+        "line": 12
+      }
+    }
   },
   "managed_resources": {},
   "data_resources": {},
