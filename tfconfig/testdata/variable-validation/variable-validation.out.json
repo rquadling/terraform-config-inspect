@@ -47,5 +47,6 @@
   "managed_resources": {},
   "checks": {},
   "data_resources": {},
-  "module_calls": {}
+  "module_calls": {},
+  "checks": {}
 }
