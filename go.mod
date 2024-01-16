@@ -1,11 +1,11 @@
-module github.com/terraform-docs/terraform-config-inspect
+module github.com/rquadling/terraform-config-inspect
 
 require (
-	github.com/go-test/deep v1.0.3
+	github.com/go-test/deep v1.1.0
 	github.com/google/go-cmp v0.6.0
-	github.com/hashicorp/hcl v0.0.0-20170504190234-a4b07c25de5f
+	github.com/hashicorp/hcl v1.0.0
 	github.com/hashicorp/hcl/v2 v2.20.1
-	github.com/spf13/pflag v1.0.3
+	github.com/spf13/pflag v1.0.5
 	github.com/zclconf/go-cty v1.14.4
 )
 
@@ -19,4 +19,4 @@ require (
 	golang.org/x/tools v0.6.0 // indirect
 )
 
-go 1.18
+go 1.21.6

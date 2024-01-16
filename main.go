@@ -9,8 +9,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/hashicorp/terraform-config-inspect/tfconfig"
 	flag "github.com/spf13/pflag"
-	"github.com/terraform-docs/terraform-config-inspect/tfconfig"
 )
 
 var showJSON = flag.Bool("json", false, "produce JSON-formatted output")
