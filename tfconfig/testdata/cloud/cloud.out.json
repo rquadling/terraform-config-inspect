@@ -3,6 +3,7 @@
   "backend": {
     "type": "cloud"
   },
+  "checks": {},
   "variables": {},
   "outputs": {},
   "required_providers": {},

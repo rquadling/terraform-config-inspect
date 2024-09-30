@@ -3,6 +3,7 @@
   "backend": {
     "type": "manta"
   },
+  "checks": {},
   "variables": {},
   "outputs": {},
   "required_providers": {},
