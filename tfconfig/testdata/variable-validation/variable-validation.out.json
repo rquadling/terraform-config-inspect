@@ -45,6 +45,7 @@
   "outputs": {},
   "required_providers": {},
   "managed_resources": {},
+  "checks": {},
   "data_resources": {},
   "module_calls": {}
 }

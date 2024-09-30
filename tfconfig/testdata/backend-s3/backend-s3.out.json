@@ -3,6 +3,7 @@
   "backend": {
     "type": "s3"
   },
+  "checks": {},
   "variables": {},
   "outputs": {},
   "required_providers": {},
