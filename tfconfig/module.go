@@ -20,7 +20,6 @@ type Module struct {
 	DataResources    map[string]*Resource       `json:"data_resources"`
 	ModuleCalls      map[string]*ModuleCall     `json:"module_calls"`
 	Checks           map[string]*Check          `json:"checks"`
-	Checks           map[string]*Check          `json:"checks"`
 
 	// Backend only appears in the root module, if at all. It won't be
 	// possible to tell if the backend config is the implied "local" backend

@@ -165,6 +165,19 @@ $ terraform-config-inspect --json path/to/module
   "module_calls": {}
 }
 ```
+## Containerized
+
+One can build a container version of this application with the following
+oneliner:
+`docker build -t terraform-config-inspect:latest -f build/Dockerfile .`
+
+Feel free to use our development stage to debug or when contributing to this
+project by including the `--target dev` in the container build phase.
+
+Example:
+- How to use the generated image if your current context is the module you want
+  to analyze:
+  `docker run -it -v $(pwd):/$(pwd) -w $(pwd) terraform-config-inspect:latest`
 
 ## Contributing
 
