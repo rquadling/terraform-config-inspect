@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/hashicorp/terraform-config-inspect/tfconfig"
+	"github.com/rquadling/terraform-config-inspect/tfconfig"
 	flag "github.com/spf13/pflag"
 )
 
