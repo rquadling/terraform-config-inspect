@@ -16,6 +16,7 @@ import (
 var showJSON = flag.Bool("json", false, "produce JSON-formatted output")
 var parseStack = flag.Bool("stack", false, "parse a Terraform stack")
 var parsePostInitConfiguration = flag.Bool("after-init", false, "parse a Terraform configuration after init")
+var showVersion = flag.Bool("version", false, "show version")
 
 func main() {
 	flag.Parse()
@@ -41,6 +42,8 @@ func main() {
 		if cfg.Diagnostics.HasErrors() {
 			os.Exit(1)
 		}
+	} else if *showVersion {
+		tfconfig.Version()
 	} else if *parseStack {
 		stack, diags := tfconfig.LoadStack(dir)
 		stack.Diagnostics = diags
