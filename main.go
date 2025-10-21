@@ -14,6 +14,7 @@ import (
 
 var showJSON = flag.Bool("json", false, "produce JSON-formatted output")
 var parseStack = flag.Bool("stack", false, "parse a Terraform stack")
+var showVersion = flag.Bool("version", false, "show version")
 
 func main() {
 	flag.Parse()
@@ -25,7 +26,9 @@ func main() {
 		dir = "."
 	}
 
-	if *parseStack {
+	if *showVersion {
+		tfconfig.Version()
+	} else if *parseStack {
 		stack, diags := tfconfig.LoadStack(dir)
 		stack.Diagnostics = diags
 
