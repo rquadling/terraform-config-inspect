@@ -86,8 +86,8 @@ func dirFiles(fs FS, dir string) (primary []string, diags hcl.Diagnostics) {
 	if err != nil {
 		diags = append(diags, &hcl.Diagnostic{
 			Severity: hcl.DiagError,
-			Summary:  "Failed to read module directory",
-			Detail:   fmt.Sprintf("Module directory %s does not exist or cannot be read.", dir),
+			Summary:  "Failed to read directory",
+			Detail:   fmt.Sprintf("Directory %s does not exist or cannot be read.", dir),
 		})
 		return
 	}
@@ -136,6 +136,10 @@ func fileExt(path string) string {
 		return ".pkr.hcl"
 	} else if strings.HasSuffix(path, ".pkr.json") {
 		return ".pkr.json"
+	} else if strings.HasSuffix(path, ".tfcomponent.hcl") {
+		return ".tfcomponent.hcl"
+	} else if strings.HasSuffix(path, ".tfstack.hcl") {
+		return ".tfstack.hcl"
 	} else {
 		return ""
 	}
