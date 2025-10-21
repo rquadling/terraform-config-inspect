@@ -41,6 +41,14 @@ var rootSchema = &hcl.BodySchema{
 			Type:       "check",
 			LabelNames: []string{"name"},
 		},
+		{
+			Type:       "component",
+			LabelNames: []string{"name"},
+		},
+		{
+			Type:       "required_providers",
+			LabelNames: nil,
+		},
 	},
 }
 
@@ -116,6 +124,9 @@ var outputSchema = &hcl.BodySchema{
 		{
 			Name: "sensitive",
 		},
+		{
+			Name: "type",
+		},
 	},
 }
 
@@ -162,6 +173,14 @@ var checkRuleSchema = &hcl.BodySchema{
 		{
 			Name:     "error_message",
 			Required: true,
+		},
+	},
+}
+
+var componentSchema = &hcl.BodySchema{
+	Attributes: []hcl.AttributeSchema{
+		{
+			Name: "source",
 		},
 	},
 }
