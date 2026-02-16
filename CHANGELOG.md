@@ -5,6 +5,9 @@ The Hashicorp's official `terraform-config-inspect` library doesn't seem to have
 
 So here are just the dates things got added in some readable form.
 
+## 2026-02-16
+- Add Copyright and License Headers (though I'm unsure what the copyright really is).
+
 ## 2025-10-21
 - Added `--version` flag (me!)
 - Added simple Makefile.
