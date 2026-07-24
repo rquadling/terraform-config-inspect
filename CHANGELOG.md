@@ -5,8 +5,13 @@ The Hashicorp's official `terraform-config-inspect` library doesn't seem to have
 
 So here are just the dates things got added in some readable form.
 
+## 2026-07-24
+- Only warn when the post init files are missing instead of an error [#114](https://github.com/hashicorp/terraform-config-inspect/pull/114)
+- Tolerate const vars and locals in module source and version [#146](https://github.com/hashicorp/terraform-config-inspect/pull/146)
+- Fixed tests to handle offset of headers added in 2026-02-16. Sorry for the broken tests!
+
 ## 2026-02-16
-- Add Copyright and License Headers (though I'm unsure what the copyright really is).
+- Add Copyright and Licence Headers (though I'm unsure what the copyright really is).
 
 ## 2025-10-21
 - Added `--version` flag (me!)
