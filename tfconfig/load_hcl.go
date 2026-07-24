@@ -542,10 +542,7 @@ func LoadModuleFromFile(file *hcl.File, mod *Module) hcl.Diagnostics {
 			mod.ModuleCalls[name] = mc
 
 			if attr, defined := content.Attributes["source"]; defined {
-				var source string
-				valDiags := gohcl.DecodeExpression(attr.Expr, nil, &source)
-				diags = append(diags, valDiags...)
-				mc.Source = source
+				mc.Source = decodeModuleSourceOrVersion(attr, file, &diags)
 			}
 
 			if mc.Source == "" {
@@ -553,10 +550,7 @@ func LoadModuleFromFile(file *hcl.File, mod *Module) hcl.Diagnostics {
 			}
 
 			if attr, defined := content.Attributes["version"]; defined {
-				var version string
-				valDiags := gohcl.DecodeExpression(attr.Expr, nil, &version)
-				diags = append(diags, valDiags...)
-				mc.Version = version
+				mc.Version = decodeModuleSourceOrVersion(attr, file, &diags)
 			}
 
 		case "check":
@@ -672,4 +666,25 @@ func LoadResourceFromBlock(block *hcl.Block) (*Resource, hcl.Diagnostics) {
 		}
 	}
 	return r, diags
+}
+
+// decodeModuleSourceOrVersion decodes a module call's source or version
+// attribute to a string.
+//
+// Terraform 1.15 allows these attributes to reference const input variables and
+// local values (see the module source documentation). Such expressions cannot
+// be evaluated with an empty evaluation context, so when the expression
+// references variables or locals we record its raw source text rather than
+// reporting an error. Constant expressions are decoded as before so that
+// genuinely wrong-typed values still surface as errors.
+func decodeModuleSourceOrVersion(attr *hcl.Attribute, file *hcl.File, diags *hcl.Diagnostics) string {
+	if len(attr.Expr.Variables()) > 0 {
+		rng := attr.Expr.Range()
+		return string(rng.SliceBytes(file.Bytes))
+	}
+
+	var value string
+	valDiags := gohcl.DecodeExpression(attr.Expr, nil, &value)
+	*diags = append(*diags, valDiags...)
+	return value
 }
