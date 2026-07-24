@@ -9,7 +9,7 @@
             "type": "string",
             "pos": {
                 "filename": "testdata-stack/outputs/outputs.tfcomponent.hcl",
-                "line": 1
+                "line": 4
             }
         },
         "lambda_urls": {
@@ -18,7 +18,7 @@
             "description": "URLs to invoke lambda functions",
             "pos": {
                 "filename": "testdata-stack/outputs/outputs.tfstack.hcl",
-                "line": 2
+                "line": 5
             }
         }
     },

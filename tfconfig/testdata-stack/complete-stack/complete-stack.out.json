@@ -64,7 +64,7 @@
             "description": "URLs to invoke lambda functions",
             "pos": {
                 "filename": "testdata-stack/complete-stack/outputs.tfcomponent.hcl",
-                "line": 1
+                "line": 4
             }
         }
     },

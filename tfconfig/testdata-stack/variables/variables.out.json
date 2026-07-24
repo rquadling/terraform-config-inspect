@@ -8,7 +8,7 @@
             "required": true,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 1
+                "line": 4
             }
         },
         "list": {
@@ -18,7 +18,7 @@
             "required": true,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 4
+                "line": 7
             }
         },
         "string_default_empty": {
@@ -28,7 +28,7 @@
             "required": false,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 8
+                "line": 11
             }
         },
         "string_default_null": {
@@ -38,7 +38,7 @@
             "required": false,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 13
+                "line": 16
             }
         },
         "list_default_empty": {
@@ -48,7 +48,7 @@
             "required": false,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 18
+                "line": 21
             }
         },
         "object_default_empty": {
@@ -58,7 +58,7 @@
             "required": false,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 23
+                "line": 26
             }
         },
         "number_default_zero": {
@@ -68,7 +68,7 @@
             "required": false,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 28
+                "line": 31
             }
         },
         "bool_default_false": {
@@ -78,7 +78,7 @@
             "required": false,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 33
+                "line": 36
             }
         },
         "bool_default_false_tfstack": {
@@ -88,7 +88,7 @@
             "required": false,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfstack.hcl",
-                "line": 1
+                "line": 4
             }
         },
         "unique_variable_name": {
@@ -99,7 +99,7 @@
             "required": false,
             "pos": {
                 "filename": "testdata-stack/variables/variables.tfcomponent.hcl",
-                "line": 38
+                "line": 41
             }
         }
     },
