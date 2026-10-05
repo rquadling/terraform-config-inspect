@@ -5,6 +5,10 @@ The Hashicorp's official `terraform-config-inspect` library doesn't seem to have
 
 So here are just the dates things got added in some readable form.
 
+## 2026-10-05
+- Allow constant variables in provider requirements [#147](https://github.com/hashicorp/terraform-config-inspect/pull/147)
+- To keep things as much as possible in line with upstream, compliance headers have been added.
+
 ## 2026-07-24
 - Only warn when the post init files are missing instead of an error [#114](https://github.com/hashicorp/terraform-config-inspect/pull/114)
 - Tolerate const vars and locals in module source and version [#146](https://github.com/hashicorp/terraform-config-inspect/pull/146)
